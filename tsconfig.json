@@ -15,6 +15,9 @@
       ],
       "@config/*": [
         "config/*"
+      ],
+      "@database/*": [
+        "database/*"
       ]
     },
     "strict": true,
