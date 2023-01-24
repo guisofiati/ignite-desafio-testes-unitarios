@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES2020",
     "module": "commonjs",
     "baseUrl": "./src",
     "paths": {
@@ -15,9 +15,6 @@
       ],
       "@config/*": [
         "config/*"
-      ],
-      "@database/*": [
-        "database/*"
       ]
     },
     "strict": true,

@@ -10,4 +10,3 @@ userProfileRouter.use(ensureAuthenticated);
 userProfileRouter.get('/', showUserProfileController.execute);
 
 export { userProfileRouter };
-

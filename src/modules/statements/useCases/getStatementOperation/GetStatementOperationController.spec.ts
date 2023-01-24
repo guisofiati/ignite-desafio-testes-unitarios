@@ -51,7 +51,7 @@ describe("Get statement operation controller", () => {
         Authorization: `Bearer ${token}`
       });
 
-    const { id } = statement.body;
+      const { id } = statement.body;
 
     const statement_operation = await request(app).get(`/api/v1/statements/${id}`).set({
       Authorization: `Bearer ${token}`

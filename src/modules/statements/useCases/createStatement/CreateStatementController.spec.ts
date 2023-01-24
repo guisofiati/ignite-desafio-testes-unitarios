@@ -42,14 +42,14 @@ describe("Create user controller", () => {
     const { token } = auth.body;
 
     const statement = await request(app)
-      .post("/api/v1/statements/deposit")
-      .send({
-        amount: 100.00,
-        description: "PIX"
-      })
-      .set({
-        Authorization: `Bearer ${token}`
-      });
+    .post("/api/v1/statements/deposit")
+    .send({
+      amount: 100.00,
+      description: "PIX"
+    })
+    .set({
+      Authorization: `Bearer ${token}`
+    });
 
     expect(statement.status).toBe(201);
     expect(statement.body).toHaveProperty("id");
@@ -65,14 +65,14 @@ describe("Create user controller", () => {
     const { token } = auth.body;
 
     const statement = await request(app)
-      .post("/api/v1/statements/withdraw")
-      .send({
-        amount: 99.00,
-        description: "Withdraw to pay the bills"
-      })
-      .set({
-        Authorization: `Bearer ${token}`
-      });
+    .post("/api/v1/statements/withdraw")
+    .send({
+      amount: 99.00,
+      description: "Withdraw to pay the bills"
+    })
+    .set({
+      Authorization: `Bearer ${token}`
+    });
 
     expect(statement.status).toBe(201);
   });
@@ -86,14 +86,14 @@ describe("Create user controller", () => {
     const { token } = auth.body;
 
     const statement = await request(app)
-      .post("/api/v1/statements/withdraw")
-      .send({
-        amount: 2.00,
-        description: "Withdraw to pay the bills"
-      })
-      .set({
-        Authorization: `Bearer ${token}`
-      });
+    .post("/api/v1/statements/withdraw")
+    .send({
+      amount: 2.00,
+      description: "Withdraw to pay the bills"
+    })
+    .set({
+      Authorization: `Bearer ${token}`
+    });
 
     expect(statement.status).toBe(400);
     expect(statement.body.message).toEqual("Insufficient funds");

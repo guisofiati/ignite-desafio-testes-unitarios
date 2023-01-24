@@ -7,4 +7,3 @@ const createUserController = new CreateUserController();
 usersRouter.post('/', createUserController.execute);
 
 export { usersRouter };
-

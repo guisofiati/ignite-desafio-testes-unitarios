@@ -7,4 +7,3 @@ const authenticateUserController = new AuthenticateUserController();
 authenticationRouter.post('/sessions', authenticateUserController.execute);
 
 export { authenticationRouter };
-
